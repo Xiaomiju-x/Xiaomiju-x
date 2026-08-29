@@ -2,8 +2,9 @@
 
 **重庆邮电大学｜RDK X5 · Linux · ROS 2 · Embedded AI**
 
-> Incoming RDK Ecosystem Development Intern @ D-Robotics  
-> Starting August 24, 2026
+> RDK Ecosystem Development Intern @ D-Robotics｜Developer Ecosystem Department
+>
+> RDK X5/S100 课程与样例 · Roboto Origin 算法迁移｜2026.08–至今
 
 ## 主要项目
 
@@ -11,3 +12,4 @@
 - [RootScope｜RDK X5 固定式根区灌溉舱](https://github.com/Xiaomiju-x/RootScope-AdventureX2026)
 - [Lab-Sentinel｜GD32H759 边缘 AI 烧结安全哨兵](https://github.com/Xiaomiju-x/Lab-Sentinel-CIMC2026)
 - [Memory ATE/PAT Platform｜存储芯片自动化测试平台](https://github.com/Xiaomiju-x/memory-ate-pat-platform)
+- [自主散料搬运机器人｜Jetson Orin Nano Super 视觉导航上位机](https://github.com/Xiaomiju-x/intelligent-vision-logistics-crane-2026)
