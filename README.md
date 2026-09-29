@@ -4,13 +4,13 @@
 
 > RDK Ecosystem Development Intern @ D-Robotics｜Developer Ecosystem Department
 >
-> RDK X5 / S100 / S600 算法适配、硬件接口调试与开发者生态交付｜2026.08–至今
+> RDK X5 机器人实机集成、X5/S100/S600 算法适配与开发者生态交付｜2026.08–至今
 
 ## 实习与近期工作
 
-更新于 **2026-09-20**。目前在地瓜机器人（D-Robotics）开发者生态部实习，主要工作为机器鸭控制与联调、Roboto Origin 算法适配、课程样例交付及生态技术支持。
+更新于 **2026-09-29**。目前在地瓜机器人（D-Robotics）开发者生态部实习，主要工作为机器鸭实机集成、Roboto Origin 算法适配、课程样例交付及生态技术支持。
 
-- **RDK X5 机器鸭控制与联调（进行中）**：已完成 X5 经总线转接板控制双关节往返运动、位置反馈和退出扭矩关闭验证；同步开展结构适配与实体装配，目前大部分装配已完成，持续推进整机联调，完整步态及整机运动尚未验证，暂无公开仓库。
+- **[RDK X5 机器鸭｜项目主导](https://github.com/Xiaomiju-x/rdk-x5-microduck)**：在团队支持下主导 RDK X5 与 HD1910M 方案选型、打印装配及 15 舵机整机联调；完成总线控制、JY901S IMU 接入、原策略在 X5 的 CPU 推理适配与本机微调台。9 月 29 日取得受控平面短距离行走阶段演示，仓库公开视频、源码快照、失败案例与工程复盘。当前 X5、转接板和电源仍在桌面外挂，带载与连续稳定行走待验证。
 - **[Roboto Origin 算法适配](https://github.com/Xiaomiju-x/roboto-origin-rdk-x5-s100)**：参与公司领导牵头的双足机器人项目，负责相关算法。已完成 X5/S100 单板离线部署及 X5/S100/S600 YOLO 真 BPU shadow 验证；近期在 S600 接入真实雷达并完成预训练语义导航网络的 CPU 扫描回放。现场采集到算法结果的联合验收仍在推进，尚未完成自主导航与运动闭环。公开仓库目前保留截至 9 月 2 日的算法版本，近期实机增量尚未同步公开。
 - **[RDK 课程与样例](https://github.com/D-Robotics/rdk-course-demos)**：交付显示、GPIO/PWM、UART/I²C、SPI、CAN 双语课程与实机演示。9 月新增交付 10 条中英文成片，配套课件已提交组织仓库；[CAN 课程贡献](https://github.com/D-Robotics/rdk-course-demos/commit/0ce864e93e8eaed061cebff69023e732961ea03e)分别记录 X5 内部回环和 S100 MCU 扩展板物理回环，不将两者混称。
 - **生态技术支持**：围绕相机、多媒体、BPU 并发、启动介质及 MCU 接口进行复现或日志分析，提供公开诊断建议与必要的研发转交依据。代表答复：[BPU 并发](https://forum.d-robotics.cc/t/topic/35643/6)、[NAND 启动参数排查](https://forum.d-robotics.cc/t/topic/35730/22)。已回复、已定位和已修复分别记录。
