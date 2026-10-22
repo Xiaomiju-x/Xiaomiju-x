@@ -8,17 +8,25 @@
 
 ## 实习与近期工作
 
-更新于 **2026-09-30**。目前在地瓜机器人（D-Robotics）开发者生态部实习，主要工作为机器鸭实机集成、Roboto Origin 算法适配、课程样例交付及生态技术支持。
+机器鸭项目更新于 **2026-10-23**（其余项目保留各自记录日期）。目前在地瓜机器人（D-Robotics）开发者生态部实习，主要工作为机器鸭实机集成、Roboto Origin 算法适配、课程样例交付及生态技术支持。
 
-### 重点项目：RDK X5 MicroDuck 复刻与实机适配
+### 重点项目：RDK X5 Duck主线｜机载短距离前进取得突破
 
 以 [Pollen Robotics 开源 MicroDuck](https://github.com/pollen-robotics/microduck) 为原型，复用 [机械行者Robo / fanhao375 的飞特版结构](https://github.com/fanhao375/microduck-replica-cad)，在团队支持下由我主导 RDK X5 + HD1910M 实体原型的方案选型、装配、软件控制与实机验证。原版使用 RK3566 与 XL330；更换计算平台和执行器后，需要重新核对总线、关节映射、IMU 坐标及承重跟随。
 
 - **选型与整机**：协调物料和打印，处理托架、脚踝及舵盘装配问题；完成 15 舵机整机装配、编号、方向检查和站姿记录。
 - **软件与排障**：打通 X5、微雪 Bus Servo Adapter (A) 和 JY901S IMU 链路，在 X5 跑通原策略 CPU 推理；比较相同目标在悬空与落地时的实际跟随，调整右腿总线支路，开发可逐轮记录参数的本机微调台。
-- **阶段成果与公开**：2026 年 9 月 29 日取得受控平面短距离行走演示。[完整阶段视频](https://github.com/Xiaomiju-x/rdk-x5-microduck/blob/main/milestone-20260929.mp4)、[失败案例与复盘](https://github.com/Xiaomiju-x/rdk-x5-microduck/blob/main/PITFALLS.md)、[源码和装配记录](https://github.com/Xiaomiju-x/rdk-x5-microduck)已公开，并在[地瓜社区原帖](https://forum.d-robotics.cc/t/topic/35728/3)更新。
+- **突破性进展 · 2026-10-23**：RDK X5、微雪小板和电池全部安装到鸭子本体后，实现短距离前进，展示末段保持站立。完成从9月桌面外接短步、10月机载站立，到当前机载前进的跨越；这组现场微调配置已保存为默认并独立备份。
+- **工程积累与开源**：持续迭代轻量化安装结构、负载布局、关节跟随和起停衔接；微调台将启动角、走动角与提前收颈时机独立设置。[最新完整视频与正侧实拍](https://github.com/Xiaomiju-x/rdk-x5-microduck/tree/main/progress/2026-10-23)、[控制模块与冻结参数](https://github.com/Xiaomiju-x/rdk-x5-microduck/tree/main/progress/2026-10-23/control)、[失败案例与复盘](https://github.com/Xiaomiju-x/rdk-x5-microduck/blob/main/PITFALLS.md)、[地瓜社区连续记录](https://forum.d-robotics.cc/t/topic/35728)持续更新。
 
-最新演示使用已记录的舵机目标片段、11 号颈根实时补偿与缓回站姿，并非在线完整强化学习策略持续行走。约 20 秒视频前段数秒是短步前移，后段展示桌面外挂的 X5、转接板和电源；带载、连续稳定行走及 HD1910M 专用策略训练仍待完成。
+本次实拍使用D历史目标片段＋11号颈根分段定角与提前收颈，自动前后倾反馈关闭，不混称为全身实时RL闭环成果。约13秒视频前段是短距离前进、后段是机载硬件展示；更长距离和重复起停稳定性继续优化。V2与硬件同事推进机内电控与电源集成，不继续外挂。
+
+**两条副线围绕主线独立推进：**
+
+- **陆吾 XGO-Duck / Arduino UNO Q**：完成独立整机装配、15轴标定、站立及短程行走现场验证，用于机械装配、控制链路和步态部署对照；直线保持、转向与抗扰继续验证。复用[陆吾官方硬件](https://github.com/LuwuDynamics/xgoduck_hardware)与[运行框架](https://github.com/LuwuDynamics/xgoduck_runtime_arduino)，不把其零位或实机结果直接等同RDK成果。
+- **南瓜鸭 / 数字瓜园**：围绕主题打印装配、互动机构与数字场景展开；Web、Godot、MuJoCo及UE5可玩版已有阶段交付，实体装配与互动联调继续推进，仿真与实机进度分别记录。
+
+[三线进度与验证范围](https://github.com/Xiaomiju-x/rdk-x5-microduck/blob/main/progress/2026-10-23/README.md) · [后续路线](https://github.com/Xiaomiju-x/rdk-x5-microduck/blob/main/ROADMAP.md)
 
 ### 实习项目：Roboto Origin × RDK X5 / S600
 
