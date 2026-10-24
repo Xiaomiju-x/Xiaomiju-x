@@ -14,11 +14,15 @@
 
 以 [Pollen Robotics 开源 MicroDuck](https://github.com/pollen-robotics/microduck) 为原型，复用[社区飞特版机械结构](https://github.com/fanhao375/microduck-replica-cad)。在团队支持下，我主导 RDK X5 + HD1910M 方案选型、整机装配、软件控制与实机验证。
 
-- **硬件与控制链路**：完成 15 舵机装配、编号与关节映射，打通 X5、微雪舵机转接板和 JY901S IMU；验证原策略在 X5 CPU 上的推理。
-- **软件与调试**：开发可视化调参面板、运行记录、安全复位与分阶段颈部控制，结合目标、关节回读和姿态日志排查供电、总线及执行器跟随问题。
-- **最新实机成果 · 2026-10-23**：X5、驱动板和电池全部安装到机体后，实现平面短距离前进；公开视频、控制代码、冻结参数和失败复盘。当前演示采用策略目标片段与分阶段颈部控制，连续实时策略行走及重复起停稳定性仍在验证。
+<a href="https://github.com/Xiaomiju-x/rdk-x5-microduck/blob/main/media/20261023/onboard-short-walk.mp4"><img src="https://raw.githubusercontent.com/Xiaomiju-x/rdk-x5-microduck/main/media/20261023/onboard-side.jpg" alt="机器鸭全机载侧面实拍：X5、驱动板与电池安装在机体上，点击查看短距离前进视频" width="225" /></a>
 
-同一项目下还推进两条副线：**陆吾 XGO-Duck / Arduino UNO Q** 完成装配、15 轴标定及官方策略短程行走复现，直线保持与抗扰继续验证；**南瓜鸭 / 数字瓜园**完成 Web、Godot、MuJoCo 与 UE5 阶段仿真展示，实体互动继续联调。V2 与硬件同事协作推进机内电控和电源集成。
+*点击实拍查看全机载短距离前进视频（2026-10-23）。*
+
+- **整机与链路**：完成 15 舵机装配、关节映射、总线与 IMU 联调，以及 X5 CPU 策略推理验证。
+- **软件与排障**：开发可视化调参、运行记录、安全复位与颈部控制，结合关节回读和姿态日志排查供电及执行器跟随问题。
+- **实机成果**：X5、驱动板和电池全部上身后实现短距离前进，公开控制代码、参数与复盘。当前使用策略目标片段与分阶段颈部控制，实时策略行走及重复起停稳定性仍在验证。
+
+同项目副线：**陆吾 XGO-Duck** 完成 15 轴标定及官方策略短程行走复现，直线保持继续验证；**南瓜鸭**完成 Web / UE5 等仿真展示，实体互动继续联调。V2 推进机内电控与电源集成。
 
 [实拍与三线进展](https://github.com/Xiaomiju-x/rdk-x5-microduck/tree/main/progress/2026-10-23) · [控制模块](https://github.com/Xiaomiju-x/rdk-x5-microduck/tree/main/progress/2026-10-23/control) · [工程复盘](https://github.com/Xiaomiju-x/rdk-x5-microduck/blob/main/PITFALLS.md) · [地瓜社区记录](https://forum.d-robotics.cc/t/topic/35728)
 
@@ -26,9 +30,13 @@
 
 负责公司团队项目中的算法适配、部署与验证。在团队已有的 X5 行走、舞蹈底座上，使用 S600 承担高层感知与多模态推理。
 
-- **真实传感器接入**：联调 Astra Pro 深度相机、STL-19P 激光雷达和 M260C 麦克风，完成三模块联合采集；两分钟真实相机分割演示约 **19.2 FPS**。
-- **S600 板端部署**：在 BPU 跑通 YOLO11x-Seg、Qwen3-VL-2B 图片问答及 Whisper-medium 中文转写，交付网页演示、源码与部署步骤；此前完成 X5/S100 单板离线适配与验证。
-- **RTX 5090 开发验证**：完成 CUDA 浮点推理、官方十输出 ONNX 导出和 10/10 张量数值校验，在线演示由 S600 执行。
+[![S600 多模态部署流程示意，点击查看源码与复现说明](assets/s600-deployment-preview.svg)](https://github.com/Xiaomiju-x/roboto-origin-rdk-x5-s100/tree/main/apps/s600_coprocessor)
+
+*部署流程示意，点击查看源码与复现说明。*
+
+- **传感器联调**：接入深度相机、雷达与麦克风；两分钟真实相机分割演示约 **19.2 FPS**。
+- **S600 部署**：在 BPU 跑通 YOLO11x-Seg、Qwen3-VL-2B 和 Whisper-medium，交付网页演示与部署文档；完成 X5/S100 离线适配。
+- **开发验证**：使用 RTX 5090 完成 CUDA 浮点推理、ONNX 导出与数值校验，在线演示在 S600 执行。
 
 当前公开成果为感知与多模态外挂原型；几何融合、现场语音准确率及自主导航尚未完成验收。
 

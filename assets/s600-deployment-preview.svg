@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="430" viewBox="0 0 1200 430" role="img" aria-labelledby="title desc">
+  <title id="title">S600 多模态部署流程示意</title>
+  <desc id="desc">静态部署流程图，并非实机界面截图。相机图像与麦克风音频接入 S600，分别用于 YOLO 实例分割、Qwen 图片问答与 Whisper 语音转写；原生深度和雷达单独展示状态。点击预览可查看公开源码与部署说明。</desc>
+  <!-- Sources: https://github.com/Xiaomiju-x/roboto-origin-rdk-x5-s100/tree/main/apps/s600_coprocessor and docs/S600_COPROCESSOR_DEMO.md. No private images or runtime data. -->
+  <defs>
+    <linearGradient id="background" x2="1" y2="1">
+      <stop stop-color="#0b1729"/>
+      <stop offset="1" stop-color="#102e3a"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto">
+      <path d="M0 0 L8 4 L0 8" fill="none" stroke="#68d9cb" stroke-width="1.5"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="430" rx="20" fill="url(#background)"/>
+  <g font-family="Segoe UI, Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif">
+    <text x="38" y="55" font-size="32" font-weight="700" fill="#ffffff">S600 多模态部署</text>
+    <text x="38" y="89" font-size="19" fill="#b4c8db">Roboto Origin · 模型适配 / 传感器接入 / 板端验证</text>
+    <rect x="978" y="28" width="184" height="36" rx="18" fill="#1e4650"/>
+    <text x="1070" y="52" text-anchor="middle" font-size="18" font-weight="600" fill="#b5f4e9">部署流程示意</text>
+
+    <rect x="38" y="122" width="250" height="194" rx="14" fill="#172b42" stroke="#3c5876"/>
+    <text x="60" y="159" font-size="22" font-weight="700" fill="#d7e9ff">视觉与语音输入</text>
+    <circle cx="67" cy="199" r="5" fill="#78b7ff"/>
+    <text x="85" y="206" font-size="20" fill="#ffffff">Astra Pro 彩色图像</text>
+    <circle cx="67" cy="243" r="5" fill="#78b7ff"/>
+    <text x="85" y="250" font-size="20" fill="#ffffff">M260C 麦克风</text>
+    <text x="60" y="290" font-size="17" fill="#a8bdd2">真实采集 · 请求按序处理</text>
+
+    <path d="M298 219 H337" fill="none" stroke="#68d9cb" stroke-width="3" marker-end="url(#arrow)"/>
+    <rect x="350" y="122" width="418" height="194" rx="14" fill="#123c40" stroke="#48bdaf" stroke-width="2"/>
+    <text x="374" y="159" font-size="23" font-weight="700" fill="#b8f4e7">RDK S600 · BPU</text>
+    <text x="374" y="201" font-size="21" font-weight="600" fill="#ffffff">YOLO11x-Seg</text>
+    <text x="645" y="201" font-size="19" fill="#c0e2dc">实例分割</text>
+    <text x="374" y="245" font-size="21" font-weight="600" fill="#ffffff">Qwen3-VL-2B</text>
+    <text x="645" y="245" font-size="19" fill="#c0e2dc">图片问答</text>
+    <text x="374" y="289" font-size="21" font-weight="600" fill="#ffffff">Whisper-medium</text>
+    <text x="645" y="289" font-size="19" fill="#c0e2dc">语音转写</text>
+
+    <path d="M778 219 H817" fill="none" stroke="#68d9cb" stroke-width="3" marker-end="url(#arrow)"/>
+    <rect x="830" y="122" width="332" height="194" rx="14" fill="#172b42" stroke="#3c5876"/>
+    <text x="854" y="159" font-size="22" font-weight="700" fill="#d7e9ff">Web 展示与验证</text>
+    <text x="854" y="205" font-size="20" fill="#ffffff">分割画面 · 场景问答</text>
+    <text x="854" y="249" font-size="20" fill="#ffffff">语音转写 · 运行状态</text>
+    <text x="854" y="290" font-size="17" fill="#a8bdd2">原生深度 / 雷达独立展示</text>
+
+    <rect x="38" y="340" width="1124" height="53" rx="11" fill="#0b202f" stroke="#2b495b"/>
+    <text x="59" y="373" font-size="19" fill="#cedeea">我的工作：算法适配、传感器联调、GPU / ONNX 校验与板端部署</text>
+    <text x="1139" y="373" text-anchor="end" font-size="17" fill="#7ee1cf">点击查看源码与复现 →</text>
+    <text x="38" y="417" font-size="14" fill="#93afc1">感知与多模态演示原型；自主导航尚未验收。</text>
+  </g>
+</svg>
