@@ -4,9 +4,9 @@
 
 目前在 **地瓜机器人（D-Robotics）开发者生态部**担任 RDK 生态开发实习生（2026.08–至今）。我主要做模型适配与板端部署、机器人软件开发和实机联调，项目经历覆盖轻量模型训练、传感器与执行器接入、可视化工具及工程验证。
 
-**工程类全国竞赛：一等奖 1 项、二等奖 2 项、三等奖 1 项；4 个工程项目担任队长。2025 国际大学生物理竞赛（UPC）金奖。**
+**工程类全国竞赛：一等奖 1 项、二等奖 2 项、三等奖 1 项；4 个工程项目担任队长。**
 
-[机器鸭实机项目](https://github.com/Xiaomiju-x/rdk-x5-microduck) · [S600 多模态部署](https://github.com/Xiaomiju-x/roboto-origin-rdk-x5-s100/tree/main/apps/s600_coprocessor) · [物理竞赛金奖作品](https://github.com/Xiaomiju-x/sasando-digital-resonator)
+[机器鸭实机项目](https://github.com/Xiaomiju-x/rdk-x5-microduck) · [S600 多模态部署](https://github.com/Xiaomiju-x/roboto-origin-rdk-x5-s100/tree/main/apps/s600_coprocessor) · [工程竞赛项目](#工程竞赛项目) · [物理竞赛金奖作品](https://github.com/Xiaomiju-x/sasando-digital-resonator)
 
 ## 实习代表项目
 
@@ -41,14 +41,6 @@
 
 ## 竞赛与研究项目
 
-### [Sasando 数字谐振器｜2025 国际大学生物理竞赛（UPC）金奖](https://github.com/Xiaomiju-x/sasando-digital-resonator)
-
-**项目负责人 · Team 112 · Problem A**
-
-围绕电声 Sasando 的传统音色恢复，开展声学建模与参数化 IIR 数字滤波设计，采用 SOS 级联结构实现滤波器，完成频率响应、冲激响应与稳定性分析。公开 MATLAB/Python 实现与竞赛论文，展示从物理问题建模、数值分析到算法实现的过程。
-
-[源码与文档](https://github.com/Xiaomiju-x/sasando-digital-resonator) · [官方金奖记录](https://www.uphysicsc.com/2025contest.html) · [官方获奖论文](https://www.uphysicsc.com/2025-GM-A-112.pdf)
-
 ### 工程竞赛项目
 
 | 项目与实现 | 我的职责 | 竞赛成果 |
@@ -58,6 +50,16 @@
 | [Lab-Sentinel｜GD32H759 烧结安全哨兵](https://github.com/Xiaomiju-x/Lab-Sentinel-CIMC2026)<br>无 NPU MCU 上的边缘 AI、FreeRTOS/LVGL 与推理优化 | 队长；嵌入式软件与边缘 AI 负责人 | 2026 西门子杯全国二等奖 |
 | [Memory ATE/PAT Platform｜存储芯片测试平台](https://github.com/Xiaomiju-x/memory-ate-pat-platform)<br>I²C/SPI 测试向量、Electron 工具与大规模 PAT 流式生成 | 软件与 PAT 算法负责人 | 2026 集创赛全国一等奖 |
 | [自主散料搬运机器人](https://github.com/Xiaomiju-x/intelligent-vision-logistics-crane-2026)<br>Jetson 视觉模型训练与部署、ROS 2 导航及通信联调 | 队长；视觉与导航软件负责人 | 2026 物流技术创意赛全国三等奖 |
+
+### [Sasando 数字谐振器｜国际大学生物理竞赛金奖](https://github.com/Xiaomiju-x/sasando-digital-resonator)
+
+**2025 University Physics Competition · Gold Medal**
+
+项目负责人 · Team 112 · Problem A
+
+围绕电声 Sasando 的传统音色恢复，开展声学建模与参数化 IIR 数字滤波设计，采用 SOS 级联结构实现滤波器，完成频率响应、冲激响应与稳定性分析。公开 MATLAB/Python 实现与竞赛论文，展示从物理问题建模、数值分析到算法实现的过程。
+
+[源码与文档](https://github.com/Xiaomiju-x/sasando-digital-resonator) · [官方金奖记录](https://www.uphysicsc.com/2025contest.html) · [官方获奖论文](https://www.uphysicsc.com/2025-GM-A-112.pdf)
 
 ## 技术栈
 
