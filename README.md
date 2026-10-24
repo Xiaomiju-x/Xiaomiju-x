@@ -1,58 +1,87 @@
-# 周苓萱
+# 周苓萱 · CanNyCat
 
 **重庆邮电大学 · 2028 届本科｜嵌入式 Linux · 端侧 AI · 机器人软件**
 
-> RDK Ecosystem Development Intern @ D-Robotics｜Developer Ecosystem Department
->
-> RDK X5 机器人实机集成、X5/S100/S600 算法适配与开发者生态交付｜2026.08–至今
+目前在 **地瓜机器人（D-Robotics）开发者生态部**担任 RDK 生态开发实习生（2026.08–至今）。我主要做模型适配与板端部署、机器人软件开发和实机联调，项目经历覆盖轻量模型训练、传感器与执行器接入、可视化工具及工程验证。
 
-## 实习与近期工作
+**工程类全国竞赛：一等奖 1 项、二等奖 2 项、三等奖 1 项；4 个工程项目担任队长。2025 国际大学生物理竞赛（UPC）金奖。**
 
-机器鸭项目更新于 **2026-10-23**（其余项目保留各自记录日期）。目前在地瓜机器人（D-Robotics）开发者生态部实习，主要工作为机器鸭实机集成、Roboto Origin 算法适配、课程样例交付及生态技术支持。
+[机器鸭实机项目](https://github.com/Xiaomiju-x/rdk-x5-microduck) · [S600 多模态部署](https://github.com/Xiaomiju-x/roboto-origin-rdk-x5-s100/tree/main/apps/s600_coprocessor) · [物理竞赛金奖作品](https://github.com/Xiaomiju-x/sasando-digital-resonator)
 
-### 重点项目：RDK X5 Duck主线｜机载短距离前进取得突破
+## 实习代表项目
 
-以 [Pollen Robotics 开源 MicroDuck](https://github.com/pollen-robotics/microduck) 为原型，复用 [机械行者Robo / fanhao375 的飞特版结构](https://github.com/fanhao375/microduck-replica-cad)，在团队支持下由我主导 RDK X5 + HD1910M 实体原型的方案选型、装配、软件控制与实机验证。原版使用 RK3566 与 XL330；更换计算平台和执行器后，需要重新核对总线、关节映射、IMU 坐标及承重跟随。
+### [RDK X5 MicroDuck｜机器鸭复刻与实机适配](https://github.com/Xiaomiju-x/rdk-x5-microduck)
 
-- **选型与整机**：协调物料和打印，处理托架、脚踝及舵盘装配问题；完成 15 舵机整机装配、编号、方向检查和站姿记录。
-- **软件与排障**：打通 X5、微雪 Bus Servo Adapter (A) 和 JY901S IMU 链路，在 X5 跑通原策略 CPU 推理；比较相同目标在悬空与落地时的实际跟随，调整右腿总线支路，开发可逐轮记录参数的本机微调台。
-- **突破性进展 · 2026-10-23**：RDK X5、微雪小板和电池全部安装到鸭子本体后，实现短距离前进，展示末段保持站立。完成从9月桌面外接短步、10月机载站立，到当前机载前进的跨越；这组现场微调配置已保存为默认并独立备份。
-- **工程积累与开源**：持续迭代轻量化安装结构、负载布局、关节跟随和起停衔接；微调台将启动角、走动角与提前收颈时机独立设置。[最新完整视频与正侧实拍](https://github.com/Xiaomiju-x/rdk-x5-microduck/tree/main/progress/2026-10-23)、[控制模块与冻结参数](https://github.com/Xiaomiju-x/rdk-x5-microduck/tree/main/progress/2026-10-23/control)、[失败案例与复盘](https://github.com/Xiaomiju-x/rdk-x5-microduck/blob/main/PITFALLS.md)、[地瓜社区连续记录](https://forum.d-robotics.cc/t/topic/35728)持续更新。
+以 [Pollen Robotics 开源 MicroDuck](https://github.com/pollen-robotics/microduck) 为原型，复用[社区飞特版机械结构](https://github.com/fanhao375/microduck-replica-cad)。在团队支持下，我主导 RDK X5 + HD1910M 方案选型、整机装配、软件控制与实机验证。
 
-本次实拍使用D历史目标片段＋11号颈根分段定角与提前收颈，自动前后倾反馈关闭，不混称为全身实时RL闭环成果。约13秒视频前段是短距离前进、后段是机载硬件展示；更长距离和重复起停稳定性继续优化。V2与硬件同事推进机内电控与电源集成，不继续外挂。
+- **硬件与控制链路**：完成 15 舵机装配、编号与关节映射，打通 X5、微雪舵机转接板和 JY901S IMU；验证原策略在 X5 CPU 上的推理。
+- **软件与调试**：开发可视化调参面板、运行记录、安全复位与分阶段颈部控制，结合目标、关节回读和姿态日志排查供电、总线及执行器跟随问题。
+- **最新实机成果 · 2026-10-23**：X5、驱动板和电池全部安装到机体后，实现平面短距离前进；公开视频、控制代码、冻结参数和失败复盘。当前演示采用策略目标片段与分阶段颈部控制，连续实时策略行走及重复起停稳定性仍在验证。
 
-**两条副线围绕主线独立推进：**
+同一项目下还推进两条副线：**陆吾 XGO-Duck / Arduino UNO Q** 完成装配、15 轴标定及官方策略短程行走复现，直线保持与抗扰继续验证；**南瓜鸭 / 数字瓜园**完成 Web、Godot、MuJoCo 与 UE5 阶段仿真展示，实体互动继续联调。V2 与硬件同事协作推进机内电控和电源集成。
 
-- **陆吾 XGO-Duck / Arduino UNO Q**：完成独立整机装配、15轴标定、站立及短程行走现场验证，用于机械装配、控制链路和步态部署对照；直线保持、转向与抗扰继续验证。复用[陆吾官方硬件](https://github.com/LuwuDynamics/xgoduck_hardware)与[运行框架](https://github.com/LuwuDynamics/xgoduck_runtime_arduino)，不把其零位或实机结果直接等同RDK成果。
-- **南瓜鸭 / 数字瓜园**：围绕主题打印装配、互动机构与数字场景展开；Web、Godot、MuJoCo及UE5可玩版已有阶段交付，实体装配与互动联调继续推进，仿真与实机进度分别记录。
+[实拍与三线进展](https://github.com/Xiaomiju-x/rdk-x5-microduck/tree/main/progress/2026-10-23) · [控制模块](https://github.com/Xiaomiju-x/rdk-x5-microduck/tree/main/progress/2026-10-23/control) · [工程复盘](https://github.com/Xiaomiju-x/rdk-x5-microduck/blob/main/PITFALLS.md) · [地瓜社区记录](https://forum.d-robotics.cc/t/topic/35728)
 
-[三线进度与验证范围](https://github.com/Xiaomiju-x/rdk-x5-microduck/blob/main/progress/2026-10-23/README.md) · [后续路线](https://github.com/Xiaomiju-x/rdk-x5-microduck/blob/main/ROADMAP.md)
+### [Roboto Origin｜RDK X5 / S100 / S600 算法适配](https://github.com/Xiaomiju-x/roboto-origin-rdk-x5-s100)
 
-### 实习项目：Roboto Origin × RDK X5 / S600
+负责公司团队项目中的算法适配、部署与验证。在团队已有的 X5 行走、舞蹈底座上，使用 S600 承担高层感知与多模态推理。
 
-参与地瓜机器人公司领导牵头的萝博头正式项目，以实习生身份负责相关算法研发、适配与验证。复用团队已验证的 X5 官方行走、舞蹈底座，外挂 S600 承担高层感知与多模态推理，面向开发者展示 RDK 生态能力。
+- **真实传感器接入**：联调 Astra Pro 深度相机、STL-19P 激光雷达和 M260C 麦克风，完成三模块联合采集；两分钟真实相机分割演示约 **19.2 FPS**。
+- **S600 板端部署**：在 BPU 跑通 YOLO11x-Seg、Qwen3-VL-2B 图片问答及 Whisper-medium 中文转写，交付网页演示、源码与部署步骤；此前完成 X5/S100 单板离线适配与验证。
+- **RTX 5090 开发验证**：完成 CUDA 浮点推理、官方十输出 ONNX 导出和 10/10 张量数值校验，在线演示由 S600 执行。
 
-- **三模块实机接入**：Astra Pro 深度相机、STL-19P 激光雷达、M260C 麦克风完成联合采集；两分钟真实相机分割约 19.2 FPS，雷达 1189 圈、49914 个 CRC 正确包、0 CRC 错误候选。
-- **S600 核心算力**：在 BPU 跑通 YOLO11x-Seg、Qwen3-VL-2B 场景问答与 Whisper-medium 通用中文转写；四核四实例固定图片回放合计 217.64 次/秒，约为单实例的 3.92 倍，不等同四台相机帧率。
-- **RTX 5090 开发链**：完成真实 CUDA 浮点验证和官方十输出 ONNX 导出，10/10 张量数值检查通过；在线演示仍在 S600 执行，没有新增训练或个人声音训练。
-- **开源交付**：2026 年 9 月 30 日已公开[源码、模型来源与部署步骤](https://github.com/Xiaomiju-x/roboto-origin-rdk-x5-s100/tree/main/apps/s600_coprocessor)、[阶段结果](https://github.com/Xiaomiju-x/roboto-origin-rdk-x5-s100/blob/main/docs/S600_COPROCESSOR_DEMO.md)，[发布 CI 通过](https://github.com/Xiaomiju-x/roboto-origin-rdk-x5-s100/actions/runs/36696623882)。网页演示支持真实场景问答和 5 秒麦克风录音→转写→图片问答。
+当前公开成果为感知与多模态外挂原型；几何融合、现场语音准确率及自主导航尚未完成验收。
 
-当前是可运行的外挂算法原型，不是自主导航验收：RGB/深度及相机—雷达标定、现场语音准确率和长期稳定性仍待验证；算法演示不下发机器人运动指令。
+[S600 源码与复现](https://github.com/Xiaomiju-x/roboto-origin-rdk-x5-s100/tree/main/apps/s600_coprocessor) · [阶段结果与验证范围](https://github.com/Xiaomiju-x/roboto-origin-rdk-x5-s100/blob/main/docs/S600_COPROCESSOR_DEMO.md)
 
-### 其他实习工作
+### 开发者生态交付
 
-- **[RDK 课程与样例](https://github.com/D-Robotics/rdk-course-demos)**：交付显示、GPIO/PWM、UART/I²C、SPI、CAN 双语课程与实机演示。9 月新增交付 10 条中英文成片，配套课件已提交组织仓库；[CAN 课程贡献](https://github.com/D-Robotics/rdk-course-demos/commit/0ce864e93e8eaed061cebff69023e732961ea03e)分别记录 X5 内部回环和 S100 MCU 扩展板物理回环，不将两者混称。
-- **生态技术支持**：围绕相机、多媒体、BPU 并发、启动介质及 MCU 接口进行复现或日志分析，提供公开诊断建议与必要的研发转交依据。代表答复：[BPU 并发](https://forum.d-robotics.cc/t/topic/35643/6)、[NAND 启动参数排查](https://forum.d-robotics.cc/t/topic/35730/22)。已回复、已定位和已修复分别记录。
+- **[课程与样例](https://github.com/D-Robotics/rdk-course-demos)**：交付显示、GPIO/PWM、UART/I²C、SPI、CAN 双语课程和实板演示，新增 10 条中英文成片并贡献组织仓库。[CAN 课程贡献](https://github.com/D-Robotics/rdk-course-demos/commit/0ce864e93e8eaed061cebff69023e732961ea03e)
+- **生态技术支持**：复现相机、多媒体、BPU 并发和 MCU 接口问题，分析启动与显示日志，提供公开诊断建议及研发转交依据。代表答复：[BPU 并发](https://forum.d-robotics.cc/t/topic/35643/6)、[NAND 启动参数排查](https://forum.d-robotics.cc/t/topic/35730/22)。
 
-## 个人扩展探索
+## 竞赛与研究项目
 
-- **[RDK Frontier Lab](https://github.com/Xiaomiju-x/rdk-frontier-lab)｜首版完成，当前未持续维护**：基于公司 RTX 5090 平台、RDK S600/S100/X5 及官方模型开展的自主算法扩展与部署探索，不属于主要实习交付。公开首版包含 CLI、数据与结果合同、74 项测试和跨平台 CI；仓库保留工具与历史研究快照，目录条目不等于成功部署模型数。详见 [v0.1.0](https://github.com/Xiaomiju-x/rdk-frontier-lab/releases/tag/v0.1.0)。
+### [Sasando 数字谐振器｜2025 国际大学生物理竞赛（UPC）金奖](https://github.com/Xiaomiju-x/sasando-digital-resonator)
 
-## 竞赛项目
+**项目负责人 · Team 112 · Problem A**
 
-- [双 RDK X5 材料合成 AI 预测与多机具身实验助理机器人](https://github.com/Xiaomiju-x/dual-rdk-x5-materials-ai-robot-lab)
-- [RootScope｜RDK X5 固定式根区灌溉舱](https://github.com/Xiaomiju-x/RootScope-AdventureX2026)
-- [Lab-Sentinel｜GD32H759 边缘 AI 烧结安全哨兵](https://github.com/Xiaomiju-x/Lab-Sentinel-CIMC2026)
-- [Memory ATE/PAT Platform｜存储芯片自动化测试平台](https://github.com/Xiaomiju-x/memory-ate-pat-platform)
-- [自主散料搬运机器人｜Jetson Orin Nano Super 视觉导航上位机](https://github.com/Xiaomiju-x/intelligent-vision-logistics-crane-2026)
+围绕电声 Sasando 的传统音色恢复，开展声学建模与参数化 IIR 数字滤波设计，采用 SOS 级联结构实现滤波器，完成频率响应、冲激响应与稳定性分析。公开 MATLAB/Python 实现与竞赛论文，展示从物理问题建模、数值分析到算法实现的过程。
+
+[源码与文档](https://github.com/Xiaomiju-x/sasando-digital-resonator) · [官方金奖记录](https://www.uphysicsc.com/2025contest.html) · [官方获奖论文](https://www.uphysicsc.com/2025-GM-A-112.pdf)
+
+### 工程竞赛项目
+
+| 项目与实现 | 我的职责 | 竞赛成果 |
+| --- | --- | --- |
+| [双 RDK X5 材料 AI 与具身实验助理机器人](https://github.com/Xiaomiju-x/dual-rdk-x5-materials-ai-robot-lab)<br>材料分析、CPU/BPU 分层部署、多机与双机械臂联调 | 队长；端侧 AI 与机器人软件负责人 | 2026 嵌入式芯片与系统设计竞赛全国二等奖 |
+| [RootScope｜RDK X5 根区灌溉舱](https://github.com/Xiaomiju-x/RootScope-AdventureX2026)<br>视觉判定与 X5→STM32→探针/水泵控制 | 队长；视觉与控制闭环负责人 | AdventureX 2026 地瓜机器人二等奖（第 2 名）、superun.ai 三等奖 |
+| [Lab-Sentinel｜GD32H759 烧结安全哨兵](https://github.com/Xiaomiju-x/Lab-Sentinel-CIMC2026)<br>无 NPU MCU 上的边缘 AI、FreeRTOS/LVGL 与推理优化 | 队长；嵌入式软件与边缘 AI 负责人 | 2026 西门子杯全国二等奖 |
+| [Memory ATE/PAT Platform｜存储芯片测试平台](https://github.com/Xiaomiju-x/memory-ate-pat-platform)<br>I²C/SPI 测试向量、Electron 工具与大规模 PAT 流式生成 | 软件与 PAT 算法负责人 | 2026 集创赛全国一等奖 |
+| [自主散料搬运机器人](https://github.com/Xiaomiju-x/intelligent-vision-logistics-crane-2026)<br>Jetson 视觉模型训练与部署、ROS 2 导航及通信联调 | 队长；视觉与导航软件负责人 | 2026 物流技术创意赛全国三等奖 |
+
+## 技术栈
+
+- **软件与系统**：C/C++、Python、Bash、Linux、Git、Docker。
+- **端侧 AI**：PyTorch、ONNX Runtime、OpenCV、OpenExplorer；RDK X5/S100/S600 CPU/BPU 模型适配、量化与部署，Jetson 视觉应用。
+- **机器人与嵌入式**：ROS 2、Nav2/SLAM；STM32/GD32、FreeRTOS/LVGL；I²C、SPI、UART、CAN 与传感器/执行器联调。
+- **建模与验证**：MATLAB/Python 信号处理、MuJoCo 仿真、轻量模型训练与微调、数值对照和实机性能分析。
+
+## 交流与合作
+
+欢迎交流机器人、端侧 AI、嵌入式 Linux、数字信号处理，以及相关竞赛与实习机会。我更熟悉模型适配、板端部署和实机联调，也可以承担轻量训练、仿真验证与工程工具开发，期待与算法、硬件和机械方向的伙伴合作。
+
+邮箱：[3773318175@qq.com](mailto:3773318175@qq.com)。项目技术问题也欢迎在对应仓库提出 Issue。
+
+## 其他探索
+
+<details>
+<summary>RDK Frontier Lab · 首版完成，当前未持续维护</summary>
+
+[RDK Frontier Lab](https://github.com/Xiaomiju-x/rdk-frontier-lab) 是基于公司 RTX 5090、RDK S600/S100/X5 和官方模型开展的个人扩展部署探索，独立于主要实习交付。公开首版包含 CLI、数据与结果约定、测试和跨平台 CI，保留历史研究快照。[v0.1.0 发布记录](https://github.com/Xiaomiju-x/rdk-frontier-lab/releases/tag/v0.1.0)
+
+</details>
+
+---
+
+主页整理于 2026-10-24；项目最新进展、来源与验证范围见各仓库。
 
