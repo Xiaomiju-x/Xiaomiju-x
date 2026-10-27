@@ -10,21 +10,23 @@
 
 ## 实习代表项目
 
-### [RDK X5 MicroDuck｜机器鸭复刻与实机适配](https://github.com/Xiaomiju-x/rdk-x5-microduck)
+### [RDK X5 Duck｜完整开源复刻与机载实机验证](https://github.com/Xiaomiju-x/rdk-x5-microduck)
 
 以 [Pollen Robotics 开源 MicroDuck](https://github.com/pollen-robotics/microduck) 为原型，复用[社区飞特版机械结构](https://github.com/fanhao375/microduck-replica-cad)。在团队支持下，我主导 RDK X5 + HD1910M 方案选型、整机装配、软件控制与实机验证。
 
-<a href="https://github.com/Xiaomiju-x/rdk-x5-microduck/blob/main/media/20261023/onboard-short-walk.mp4"><img src="https://raw.githubusercontent.com/Xiaomiju-x/rdk-x5-microduck/main/media/20261023/onboard-side.jpg" alt="机器鸭全机载侧面实拍：X5、驱动板与电池安装在机体上，点击查看短距离前进视频" width="225" /></a>
+**已在地瓜社区完整发布，并同步 GitHub 六篇 24 章复刻手册**：从硬件采购、3D 打印与装配接线，到软件部署、15 轴标定、实机调试和 MuJoCo 教学仿真，提供源码、机械文件与固定版本资料包。
 
-*点击实拍查看全机载短距离前进视频（2026-10-23）。*
+[![RDK X5 Duck 完整开源复刻：24章手册、源码与机械文件；点击观看双电池样机全机载短距离前进](assets/duck-project-preview.png)](https://github.com/Xiaomiju-x/rdk-x5-microduck/blob/main/media/20261023/onboard-short-walk.mp4)
+
+*点击实拍查看全机载短距离前进视频（2026-10-23，双电池样机）。*
 
 - **整机与链路**：完成 15 舵机装配、关节映射、总线与 IMU 联调，以及 X5 CPU 策略推理验证。
-- **软件与排障**：开发可视化调参、运行记录、安全复位与颈部控制，结合关节回读和姿态日志排查供电及执行器跟随问题。
-- **实机成果**：X5、驱动板和电池全部上身后实现短距离前进，公开控制代码、参数与复盘。当前使用策略目标片段与分阶段颈部控制，实时策略行走及重复起停稳定性仍在验证。
+- **软件与复刻交付**：公开 D 运行包、Web 调参控制台、逐机配置与 IMU 检查，提供无硬件 DEMO、MuJoCo 教学模型及装配调试手册；1/2/3/5 轮执行通过离线验证，多轮实机效果待验证。
+- **实机成果**：X5、驱动板和电池全部上身后实现短距离前进，采用相对目标序列与分阶段颈部控制。10 月 27 日确认单电池可为 X5 与 15 舵机供电启动；单电池带载、连续运行及 RL 闭环仍待验证。
 
-同项目副线：**陆吾 XGO-Duck** 完成 15 轴标定及官方策略短程行走复现，直线保持继续验证；**南瓜鸭**完成 Web / UE5 等仿真展示，实体互动继续联调。V2 推进机内电控与电源集成。
+同项目副线：**陆吾 XGO-Duck** 完成 15 轴标定及官方策略短程行走复现，直线保持继续验证；**南瓜鸭**完成 Web / UE5 等仿真展示，实体互动继续联调。主线继续推进 R9 实配、单电池带载与线束优化。
 
-[实拍与三线进展](https://github.com/Xiaomiju-x/rdk-x5-microduck/tree/main/progress/2026-10-23) · [控制模块](https://github.com/Xiaomiju-x/rdk-x5-microduck/tree/main/progress/2026-10-23/control) · [工程复盘](https://github.com/Xiaomiju-x/rdk-x5-microduck/blob/main/PITFALLS.md) · [地瓜社区记录](https://forum.d-robotics.cc/t/topic/35728)
+[地瓜社区完整教程](https://forum.d-robotics.cc/t/topic/35728/1) · [GitHub 24 章手册](https://github.com/Xiaomiju-x/rdk-x5-microduck/blob/main/docs/FULL_SOLUTION.md) · [固定版本下载](https://github.com/Xiaomiju-x/rdk-x5-microduck/releases/tag/v2026.10.27.1) · [公开软件与 DEMO](https://github.com/Xiaomiju-x/rdk-x5-microduck/tree/main/software) · [单电池与 R9 进展](https://github.com/Xiaomiju-x/rdk-x5-microduck/blob/main/docs/SINGLE_POWER_R9.md)
 
 ### [Roboto Origin｜RDK X5 / S100 / S600 算法适配](https://github.com/Xiaomiju-x/roboto-origin-rdk-x5-s100)
 
@@ -93,5 +95,5 @@
 
 ---
 
-主页整理于 2026-10-24；项目最新进展、来源与验证范围见各仓库。
+主页整理于 2026-10-27；项目最新进展、来源与验证范围见各仓库。
 
