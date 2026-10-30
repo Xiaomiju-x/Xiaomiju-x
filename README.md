@@ -29,8 +29,6 @@
 
 **[南瓜鸭 · Pumpkin Duck Garden｜已结项归档](https://github.com/Xiaomiju-x/rdk-x5-microduck/tree/main/projects/pumpkin-duck)**
 
-<a href="https://github.com/Xiaomiju-x/rdk-x5-microduck/tree/main/projects/pumpkin-duck"><img src="https://raw.githubusercontent.com/Xiaomiju-x/rdk-x5-microduck/main/projects/pumpkin-duck/media/duck-and-mask.jpg" alt="真实机器鸭与白色南瓜面具，万圣节活动副线已结项" width="520"></a>
-
 万圣节外观与互动副线，已于 **2026-10-30 结项**。保留白色南瓜面具、打印瓜园、Web / UE5 展示和活动资料。面具承担角色外观，并预留相机、灯眼和声音接口；**视觉/语音软件与瓜园完整实物联动未完成**。相关用途与互动方案仅作拓展设计留档，不再主动推进。
 
 [结项与实拍](https://github.com/Xiaomiju-x/rdk-x5-microduck/tree/main/projects/pumpkin-duck) · [面具结构快照](https://github.com/Xiaomiju-x/rdk-x5-microduck/tree/main/projects/pumpkin-duck/mechanical/mask) · [保留的未完成拓展](https://github.com/Xiaomiju-x/rdk-x5-microduck/blob/main/projects/pumpkin-duck/EXTENSIONS.md)
