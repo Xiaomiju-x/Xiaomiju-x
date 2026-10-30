@@ -17,15 +17,15 @@
 
 ### [RDK X5 Duck｜从开源结构到机载原型](https://github.com/Xiaomiju-x/rdk-x5-microduck)
 
-将 RDK X5 接入开源机器鸭本体，完成机载控制、短距离前进验证与完整复刻资料交付。
+将 RDK X5 接入开源机器鸭本体，完成机载控制、双电池短距离前进验证与完整复刻资料交付；当前推进单电源布局与带载供电优化。
 
-[![RDK X5 Duck 完整开源复刻：24章手册、源码与机械文件；点击观看双电池样机全机载短距离前进](assets/duck-project-preview.png)](https://github.com/Xiaomiju-x/rdk-x5-microduck/blob/main/media/20261023/onboard-short-walk.mp4)
+[![RDK X5 Duck单电源机载样机：已能站立，行走供电升级中](assets/duck-single-power-20261030.png)](https://github.com/Xiaomiju-x/rdk-x5-microduck/blob/main/docs/CURRENT_PROTOTYPE.md)
 
-- **我的贡献**：在团队支持下主导方案选型、15 轴装配与映射、Linux/Python 控制、总线与 IMU 联调；开发 Web 调参、运行记录与颈部控制。
-- **已交付**：双电池样机全机载短距离前进；地瓜社区与 GitHub 同步六篇 **24 章复刻手册**、公开软件、机械文件及 MuJoCo 教学仿真。
-- **验证范围**：成功动作采用相对目标序列与分阶段颈部控制；单电池已验证供电启动，带载、连续运行与 RL 闭环继续推进。
+- **我的贡献**：在团队支持下主导方案选型、15轴装配与映射、Linux/Python控制、总线与IMU联调；开发Web调参、运行记录与颈部控制。
+- **当前进度**：单电源样机已能站立，X5背部竖装、40PIN双UART收拢通信；带载行走供电仍在升级，2S航模电池与5.0V UBEC已采购待验证。
+- **已交付**：双电池样机机载短距离前进；六篇 **24章复刻手册**、公开软件、机械文件与MuJoCo教学仿真。长距离行走与RL闭环继续推进。
 
-[观看实机演示](https://github.com/Xiaomiju-x/rdk-x5-microduck/blob/main/media/20261023/onboard-short-walk.mp4) · [软件与 DEMO](https://github.com/Xiaomiju-x/rdk-x5-microduck/tree/main/software) · [24 章复刻手册](https://github.com/Xiaomiju-x/rdk-x5-microduck/blob/main/docs/FULL_SOLUTION.md) · [地瓜社区](https://forum.d-robotics.cc/t/topic/35728/1)
+[当前样机与最新进度](https://github.com/Xiaomiju-x/rdk-x5-microduck/blob/main/docs/CURRENT_PROTOTYPE.md) · [双电池历史行走实拍](https://github.com/Xiaomiju-x/rdk-x5-microduck/blob/main/media/20261023/onboard-short-walk.mp4) · [24章复刻手册](https://github.com/Xiaomiju-x/rdk-x5-microduck/blob/main/docs/FULL_SOLUTION.md) · [地瓜社区](https://forum.d-robotics.cc/t/topic/35728/1)
 
 **[南瓜鸭 · Pumpkin Duck Garden｜已结项归档](https://github.com/Xiaomiju-x/rdk-x5-microduck/tree/main/projects/pumpkin-duck)**
 
@@ -38,7 +38,7 @@
 
 基于 [Pollen Robotics MicroDuck](https://github.com/pollen-robotics/microduck) 与[社区飞特版机械结构](https://github.com/fanhao375/microduck-replica-cad)。公开运行包支持 1/2/3/5 轮，已完成离线验证，多轮实机效果待验证。
 
-同项目副线：**陆吾 XGO-Duck** 完成 15 轴标定与官方策略短程行走复现，直线保持继续验证；**南瓜鸭**已结项，面具用途与瓜园互动的未完成部分按上方档案保留，不再联调。主线推进 R9 实配、单电池带载与线束优化。
+同项目副线：**陆吾 XGO-Duck** 完成 15 轴标定与官方策略短程行走复现，直线保持继续验证；**南瓜鸭**已结项，面具用途与瓜园互动的未完成部分按上方档案保留，不再联调。主线推进新单电源带载对照、电池/UBEC固定和线束优化，再验证长距离与RL闭环。
 
 [固定版本下载](https://github.com/Xiaomiju-x/rdk-x5-microduck/releases/tag/v2026.10.27.1) · [单电池与 R9 进展](https://github.com/Xiaomiju-x/rdk-x5-microduck/blob/main/docs/SINGLE_POWER_R9.md)
 
@@ -134,5 +134,5 @@
 
 ---
 
-主页整理于 2026-10-30（本次更新南瓜鸭结项部分）；项目最新进展、来源与验证范围见各仓库。
+主页整理于 2026-10-30（同步RDK Duck单电源样机，保留南瓜鸭结项档案）；项目最新进展、来源与验证范围见各仓库。
 
