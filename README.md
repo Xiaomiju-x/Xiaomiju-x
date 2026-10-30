@@ -27,12 +27,20 @@
 
 [观看实机演示](https://github.com/Xiaomiju-x/rdk-x5-microduck/blob/main/media/20261023/onboard-short-walk.mp4) · [软件与 DEMO](https://github.com/Xiaomiju-x/rdk-x5-microduck/tree/main/software) · [24 章复刻手册](https://github.com/Xiaomiju-x/rdk-x5-microduck/blob/main/docs/FULL_SOLUTION.md) · [地瓜社区](https://forum.d-robotics.cc/t/topic/35728/1)
 
+**[南瓜鸭 · Pumpkin Duck Garden｜已结项归档](https://github.com/Xiaomiju-x/rdk-x5-microduck/tree/main/projects/pumpkin-duck)**
+
+<a href="https://github.com/Xiaomiju-x/rdk-x5-microduck/tree/main/projects/pumpkin-duck"><img src="https://raw.githubusercontent.com/Xiaomiju-x/rdk-x5-microduck/main/projects/pumpkin-duck/media/duck-and-mask.jpg" alt="真实机器鸭与白色南瓜面具，万圣节活动副线已结项" width="520"></a>
+
+万圣节外观与互动副线，已于 **2026-10-30 结项**。保留白色南瓜面具、打印瓜园、Web / UE5 展示和活动资料。面具承担角色外观，并预留相机、灯眼和声音接口；**视觉/语音软件与瓜园完整实物联动未完成**。相关用途与互动方案仅作拓展设计留档，不再主动推进。
+
+[结项与实拍](https://github.com/Xiaomiju-x/rdk-x5-microduck/tree/main/projects/pumpkin-duck) · [面具结构快照](https://github.com/Xiaomiju-x/rdk-x5-microduck/tree/main/projects/pumpkin-duck/mechanical/mask) · [保留的未完成拓展](https://github.com/Xiaomiju-x/rdk-x5-microduck/blob/main/projects/pumpkin-duck/EXTENSIONS.md)
+
 <details>
 <summary>上游来源、同项目副线与后续进展</summary>
 
 基于 [Pollen Robotics MicroDuck](https://github.com/pollen-robotics/microduck) 与[社区飞特版机械结构](https://github.com/fanhao375/microduck-replica-cad)。公开运行包支持 1/2/3/5 轮，已完成离线验证，多轮实机效果待验证。
 
-同项目副线：**陆吾 XGO-Duck** 完成 15 轴标定与官方策略短程行走复现，直线保持继续验证；**南瓜鸭**完成 Web / UE5 等仿真展示，实体互动继续联调。主线推进 R9 实配、单电池带载与线束优化。
+同项目副线：**陆吾 XGO-Duck** 完成 15 轴标定与官方策略短程行走复现，直线保持继续验证；**南瓜鸭**已结项，面具用途与瓜园互动的未完成部分按上方档案保留，不再联调。主线推进 R9 实配、单电池带载与线束优化。
 
 [固定版本下载](https://github.com/Xiaomiju-x/rdk-x5-microduck/releases/tag/v2026.10.27.1) · [单电池与 R9 进展](https://github.com/Xiaomiju-x/rdk-x5-microduck/blob/main/docs/SINGLE_POWER_R9.md)
 
@@ -128,5 +136,5 @@
 
 ---
 
-主页整理于 2026-10-27；项目最新进展、来源与验证范围见各仓库。
+主页整理于 2026-10-30（本次更新南瓜鸭结项部分）；项目最新进展、来源与验证范围见各仓库。
 
